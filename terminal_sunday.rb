@@ -27,15 +27,38 @@ birth_year = birthdate_parsed.year
 years_passed = (current_date.year - birth_year)
 last_year = birth_year + life_expectancy - 1
 
-puts "#{name}, only #{weeks_remaining} Sundays remain\n\n"
+def red(str)
+  "\e[41m#{str}\e[0m"
+end
+def green(str)
+  "\e[42m#{str}\e[0m"
+end
+
+puts "#{name}, only #{weeks_remaining} Sundays remain\n"
+puts "\n" if birth_year % 20 > 10
+
+print "   " * ((birth_year - 1) % 20)
+puts "#{birth_year}\n"
+print "   " * ((birth_year - 1) % 20)
 
 (0...life_expectancy).each do |year_index|
-  puts "#{birth_year}\n" if year_index == 0
-  print year_index < years_passed ? "\e[41m  \e[0m " : "\e[42m  \e[0m "
+  year = birth_year + year_index
+  if year_index < years_passed
+    print red("  ")
+  else
+    print green("  ")
+  end
 
-  line_break = (year_index == life_expectancy - 1) ? "\n" : "\n\n"
-  print line_break if (year_index + 1) % 20 == 0
+  if year % 20 == 0 && year_index < life_expectancy-1
+    puts
+    puts
+  else
+    print " "
+  end
 end
-print " " * 55 + last_year.to_s
+
+indent = [0,((last_year % 20) * 3 - 5)].max
+indent = 55 if last_year % 20 == 0
+print "\n#{" " * indent}#{last_year}"
 
 puts "\n\nHow are you going to spend these Sundays, #{name}?"
