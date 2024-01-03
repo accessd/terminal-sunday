@@ -4,7 +4,6 @@
 
 ![ScreenShot](https://raw.githubusercontent.com/accessd/the-last-sunday/master/img/screenshot.png)
 
-Get reminded of how little of your life is left with each new console session!
 The idea is to provide a graphical and thought-provoking view of one's life span, promoting a reflection on how we spend our time.
 
 ## Ruby version
@@ -13,7 +12,7 @@ Made initially with Bash, I wrote another version with Ruby language because I l
 
 ## Installation
 
-Script should work in macOS and Linux.
+The script should work on macOS and Linux.
 To use this script, follow the steps below:
 
 1. Download script or clone repository and make sure the script is executable:
