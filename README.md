@@ -1,8 +1,8 @@
-# The Last Sunday
+# The Terminal Sunday
 
 > "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life." - Steve Jobs
 
-![ScreenShot](https://raw.githubusercontent.com/accessd/the-last-sunday/master/img/screenshot.png)
+![ScreenShot](https://raw.githubusercontent.com/accessd/terminal-sunday/master/img/screenshot.png)
 
 The idea is to provide a graphical and thought-provoking view of one's life span, promoting a reflection on how we spend our time.
 
@@ -18,14 +18,14 @@ To use this script, follow the steps below:
 1. Download script or clone repository and make sure the script is executable:
 
 ```bash
-curl -L https://raw.githubusercontent.com/accessd/the-last-sunday/main/last_sunday.sh -o "$HOME/last_sunday.sh"
-chmod +x "$HOME/last_sunday.sh"
+curl -L https://raw.githubusercontent.com/accessd/terminal-sunday/main/terminal_sunday.sh -o "$HOME/terminal_sunday.sh"
+chmod +x "$HOME/terminal_sunday.sh"
 ```
 
 2. Add the script run to the end of .bashrc/.zshrc/etc.
 
 ```bash
-$HOME/last_sunday.sh 1985-06-08 Joe
+$HOME/terminal_sunday.sh 1985-06-08 Joe
 ```
 
 Provide your birthdate and name to the script.
@@ -33,13 +33,13 @@ Provide your birthdate and name to the script.
 You can run it randomly with:
 
 ```bash
-(( RANDOM%2 == 0 )) && $HOME/last_sunday.sh 1985-06-08 Joe
+(( RANDOM%2 == 0 )) && $HOME/terminal_sunday.sh 1985-06-08 Joe
 ```
 
 Or add sleep && clear after the command
 
 ```bash
-$HOME/last_sunday.sh 1985-06-08 Joe;sleep 1;clear
+$HOME/terminal_sunday.sh 1985-06-08 Joe;sleep 1;clear
 ```
 
 to clear the screen after one second.
