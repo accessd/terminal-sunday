@@ -17,12 +17,16 @@ To use this script, follow the steps below:
 
 1. Download script or clone repository and make sure the script is executable:
 
-    curl -L https://raw.githubusercontent.com/accessd/the-last-sunday/main/last_sunday.sh -o "$HOME/last_sunday.sh"
-    chmod +x "$HOME/last_sunday.sh"
+```bash
+curl -L https://raw.githubusercontent.com/accessd/the-last-sunday/main/last_sunday.sh -o "$HOME/last_sunday.sh"
+chmod +x "$HOME/last_sunday.sh"
+```
 
 2. Add the script run to the end of .bashrc/.zshrc/etc.
 
-    $HOME/last_sunday.sh 1985-06-08 Joe
+```bash
+$HOME/last_sunday.sh 1985-06-08 Joe
+```
 
 Provide your birthdate and name to the script.
 
