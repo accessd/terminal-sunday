@@ -30,6 +30,20 @@ $HOME/last_sunday.sh 1985-06-08 Joe
 
 Provide your birthdate and name to the script.
 
+You can run it randomly with:
+
+```bash
+(( RANDOM%2 == 0 )) && $HOME/last_sunday.sh 1985-06-08 Joe
+```
+
+Or add sleep && clear after the command
+
+```bash
+$HOME/last_sunday.sh 1985-06-08 Joe;sleep 1;clear
+```
+
+to clear the screen after one second.
+
 ## Credits
 
 Inspired by [The Last Sunday](https://chromewebstore.google.com/detail/the-last-sunday-reminder/aiojhapcgfgmiacbbjfgedhlcchmpelh?pli=1) chrome extension.
