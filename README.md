@@ -44,7 +44,7 @@ $HOME/terminal_sunday.sh 1985-06-08 Joe;sleep 1;clear
 
 to clear the screen after one second.
 
-You can specify number of columns by:
+You can specify the number of columns by:
 
 ```bash
 $HOME/terminal_sunday.sh 1985-06-08 Joe 10
