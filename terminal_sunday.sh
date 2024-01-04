@@ -12,6 +12,7 @@ fi
 
 birthdate=$1
 name=${2:-$USER}
+columns=${3:-20}
 
 life_expectancy=80
 last_year_index=$((life_expectancy - 1))
@@ -37,9 +38,11 @@ weeks_remaining=$((total_weeks - weeks_passed))
 
 echo -e "$name, only $weeks_remaining Sundays remain\n"
 
-for (( row=0; row<4; row++ )); do
-    for (( col=0; col<20; col++ )); do
-        year_index=$((row * 20 + col))
+rows=$((life_expectancy / columns))
+
+for (( row=0; row<rows; row++ )); do
+    for (( col=0; col<columns; col++ )); do
+        year_index=$((row * columns + col))
           if (( year_index == 0 )); then
             echo $birth_year
           fi
@@ -55,7 +58,14 @@ for (( row=0; row<4; row++ )); do
     fi
 done
 
-printf ' %.0s' {1..55}
+# print spaces before last year
+gaps=$((columns - 1))
+squares=$((columns * 2))
+indent=$((gaps + squares - 4))
+for ((i=0; i<indent; i++)); do
+    echo -n ' '
+done
+
 last_year=$((birth_year + last_year_index))
 echo $last_year
 

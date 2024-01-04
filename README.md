@@ -44,6 +44,14 @@ $HOME/terminal_sunday.sh 1985-06-08 Joe;sleep 1;clear
 
 to clear the screen after one second.
 
+You can specify number of columns by:
+
+```bash
+$HOME/terminal_sunday.sh 1985-06-08 Joe 10
+```
+
+the main thing is that 80 is divisible without a remainder by this number of columns :)
+
 ## Credits
 
 Inspired by [The Last Sunday](https://chromewebstore.google.com/detail/the-last-sunday-reminder/aiojhapcgfgmiacbbjfgedhlcchmpelh?pli=1) chrome extension.
