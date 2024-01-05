@@ -53,8 +53,9 @@ $HOME/terminal_sunday.sh 1985-06-08 Joe 10
 the main thing is that 80 is divisible without a remainder by this number of columns :)
 
 To make to command more easy to remember you can just add a function to your environment variable file
-> If your using mac then it(environment variable file) should be in your home directory called the .bash_profile
-> If your using linux ubuntu it(environment variable file) should be in your home directory called the .bashrc 
+> If your using mac then it(environment variable file) should be in your home directory called the .bash_profile.
+> If your using linux ubuntu it(environment variable file) should be in your home directory called the .bashrc.
+
 add this code in the bottom of that file :
 
 ```bash
