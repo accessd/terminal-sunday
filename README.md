@@ -52,7 +52,10 @@ $HOME/terminal_sunday.sh 1985-06-08 Joe 10
 
 the main thing is that 80 is divisible without a remainder by this number of columns :)
 
-To make to command more easy to remember you can just add a function to your file:
+To make to command more easy to remember you can just add a function to your environment variable file
+if your using mac then it(environment variable file) should be in your home directory called the .bash_profile
+if your using linux ubuntu it(environment variable file) should be in your home directory called the .bashrc 
+add this code in the bottom of that file :
 
 ```bash
 
@@ -62,7 +65,8 @@ life(){
 
 ```
 
-after adding this function at the end your your .bashrc file . go to a new terminal window and to run the script type "life" command
+After adding this function at the end your your .bashrc file . 
+You can run the script just by typing "life" in your terminal
 
 ```bash
 
