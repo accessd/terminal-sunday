@@ -12,7 +12,7 @@ Made initially with Bash, I wrote another version with Ruby language because I l
 
 ## Installation
 
-The script should work on macOS and Linux.
+The script should work on macOS and Linux (The bash script may also work with MINGW).
 To use this script, follow the steps below:
 
 1. Download script or clone repository and make sure the script is executable:
