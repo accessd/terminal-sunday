@@ -18,17 +18,13 @@ life_expectancy=80
 last_year_index=$((life_expectancy - 1))
 
 case "$(uname)" in
-  "Linux")
+  "Linux" | "MINGW"*)
     birth_year=$(date -d "$birthdate" +"%Y")
     birth_timestamp=$(date -d "$birthdate" +%s)
     ;;
   "Darwin")
     birth_year=$(date -j -f "%Y-%m-%d" "$birthdate" +"%Y")
     birth_timestamp=$(date -j -f "%Y-%m-%d" "$birthdate" +%s)
-    ;;
-  "MINGW"*)
-    birth_year=$(date -d "$birthdate" +"%Y")
-    birth_timestamp=$(date -d "$birthdate" +%s)
     ;;
   *) echo "Unsupported OS"; exit 1 ;;
 esac
