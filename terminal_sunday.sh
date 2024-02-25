@@ -18,7 +18,7 @@ life_expectancy=80
 last_year_index=$((life_expectancy - 1))
 
 case "$(uname)" in
-  "Linux")
+  "Linux"|"CYGWIN"*)
     birth_year=$(date -d "$birthdate" +"%Y")
     birth_timestamp=$(date -d "$birthdate" +%s)
     ;;
