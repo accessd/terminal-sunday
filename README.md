@@ -28,6 +28,12 @@ chmod +x "$HOME/terminal_sunday.sh"
 $HOME/terminal_sunday.sh 1985-06-08 Joe
 ```
 
+Fish: 
+
+```fish
+bash $HOME/terminal_sunday.sh 1985-06-08 Joe
+```
+
 Provide your birthdate and name to the script.
 
 You can run it randomly with:
