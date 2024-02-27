@@ -58,6 +58,31 @@ $HOME/terminal_sunday.sh 1985-06-08 Joe 10
 
 the main thing is that 80 is divisible without a remainder by this number of columns :)
 
+To make to command more easy to remember you can just add a function to your environment variable file
+
+> If your using mac then it(environment variable file) should be in your home directory called the .bash_profile
+
+> If your using linux ubuntu it(environment variable file) should be in your home directory called the .bashrc
+
+add this code in the bottom of that file :
+
+```bash
+
+life(){
+        $HOME/terminal_sunday.sh yyyy-mm-dd your-name
+}
+
+```
+
+After adding this function at the end your your .bashrc file . 
+You can run the script just by typing "life" in your terminal
+
+```bash
+
+life
+
+```
+
 ## Credits
 
 Inspired by [The Last Sunday](https://chromewebstore.google.com/detail/the-last-sunday-reminder/aiojhapcgfgmiacbbjfgedhlcchmpelh?pli=1) chrome extension.
