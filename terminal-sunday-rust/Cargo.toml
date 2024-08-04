@@ -1,0 +1,10 @@
+[package]
+name = "terminal-sunday-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.38"
+clap = { version = "4.5.13", features = ["derive"] }
