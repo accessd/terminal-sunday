@@ -17,17 +17,15 @@ columns=${3:-20}
 life_expectancy=80
 last_year_index=$((life_expectancy - 1))
 
-case "$(uname)" in
-  "Linux" | "MINGW" | "CYGWIN"*)
-    birth_year=$(date -d "$birthdate" +"%Y")
-    birth_timestamp=$(date -d "$birthdate" +%s)
-    ;;
-  "Darwin")
-    birth_year=$(date -j -f "%Y-%m-%d" "$birthdate" +"%Y")
-    birth_timestamp=$(date -j -f "%Y-%m-%d" "$birthdate" +%s)
-    ;;
-  *) echo "Unsupported OS"; exit 1 ;;
-esac
+if date --version &>/dev/null; then
+  # GNU date
+  birth_year=$(date -d "$birthdate" +"%Y")
+  birth_timestamp=$(date -d "$birthdate" +%s)
+else
+  # BSD date (macOS native)
+  birth_year=$(date -j -f "%Y-%m-%d" "$birthdate" +"%Y")
+  birth_timestamp=$(date -j -f "%Y-%m-%d" "$birthdate" +%s)
+fi
 
 current_year=$(date +"%Y")
 current_timestamp=$(date +%s)
